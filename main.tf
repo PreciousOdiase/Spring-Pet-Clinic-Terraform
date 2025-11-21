@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "eu-west-1"
+  region = "eu-west-2"
 }
 
 resource "aws_vpc" "springpetclinic_vpc" {
@@ -14,7 +14,7 @@ resource "aws_subnet" "springpetclinic_subnet" {
   count                   = 2
   vpc_id                  = aws_vpc.springpetclinic_vpc.id
   cidr_block              = cidrsubnet(aws_vpc.springpetclinic_vpc.cidr_block, 8, count.index)
-  availability_zone       = element(["eu-west-1a", "eu-west-1b"], count.index)
+  availability_zone       = element(["eu-west-2a", "eu-west-2b"], count.index)
   map_public_ip_on_launch = true
 
   tags = {
