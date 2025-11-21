@@ -1,0 +1,42 @@
+# Local terraform state
+*.tfstate
+*.tfstate.*
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Local-only variable files
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+
+# Override files used for local development
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform working directory
+.terraform/
+.terraform.lock.hcl
+
+# Module / provider plugins 
+.terraform/providers/
+
+# Terraform plan files
+*.plan
+
+# AWS keys
+.aws/credentials
+.aws/config
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
